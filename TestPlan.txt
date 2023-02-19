@@ -1,0 +1,64 @@
+
+Test Plan for AIR's REST API GET Search Contacts
+---------------------------------------------
+
+1. Context
+
+As an agent, your account gives you access to all the contacts of the company. 
+This API allows performing a search within company's shared Contacts with extra query parameters.
+API description: https://developer.aircall.io/api-references/#search-contacts
+API URL: https://api.aircall.io/v1/contacts/search?order=asc&order_by=created_at&phone_number=[number]
+HTTPBasicAuth details (username & password):
+    Id: [ID]
+    Token: [Token]
+
+
+2. Mandatory query parameters to test
+    ======================================================
+	| Field        | Type   | Description                |
+	------------------------------------------------------
+	| phone_number | String | Phone number of a contact  |
+	| email        | String | Email address of a contact |
+	======================================================
+
+3. Scope of testing
+	3.1. Features to be tested
+		
+		Testing will verify correct values for contacts' phone or/and email, separately and as pairs.
+		Results should be returned with proper response status codes.
+		Going further, testing the JSON structure can be performed.
+
+	3.2. Features NOT to be tested
+		Unique values (assuming each phone number and email are unique)
+		All other JSON fields.
+		Response payload (JSON body).
+		Response headers.
+		Any negative scenarios (different valid/invalid inputs, security, edge cases, etc.).
+		Unauthenticated attempt to retrieve data.
+		Response times (performance).
+		Load and Stress tests.
+
+	NOTES:
+		* Some negative scenarios have been performed during automation to check code (branch, state, decision) coverage
+		** Some of the functions and supporting files have been implemented during automation phase.
+		*** Parameters from .feature files can be mapped them to .env values (unfinished, TBD)
+
+
+4. Test deliverables
+	Test Plan, Test Cases, Console logs, additional log inputs, passed/failed summary.
+
+5. Testing approach
+	Proof of concept will be performed using a REST API testing tool.
+	Automation will be done using BDD tests written in a natural language style, assuming a better collaboration
+between developers, QA and non-technical or business participants in a software project
+
+6. Testing tools
+	Postman
+	Visual Studio 2022
+	Python
+	Behave
+	Any additional modules
+	
+6. Estimate ~ 1 week
+
+7. Exit criteria - as soon as all bullets in 3.1. are automated and tests are stable and have no issues
