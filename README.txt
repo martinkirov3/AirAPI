@@ -31,7 +31,7 @@ User-Agent: python-requests/2.28.2
 Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: keep-alive
-Authorization: Basic NTkzMDFjNDU2ZjIxOTk2OGFiODU1ZTBlYTY3N2ViZWE6OWQ2NTg3Y2JkOGI0NjFmYTRmMTdkYWEzMjY3ZmQ0MmY=
+Authorization: Basic 
 
 None
 
@@ -47,7 +47,6 @@ x-content-type-options: nosniff
 x-download-options: noopen
 x-permitted-cross-domain-policies: none
 referrer-policy: strict-origin-when-cross-origin
-etag: W/"d3f7858c1e2ef823a6955aadb2bee10f"
 cache-control: max-age=0, private, must-revalidate
 x-request-id: 2dbcbea6-2806-4c4f-ae1c-980ff3f6594d
 x-runtime: 0.106498
